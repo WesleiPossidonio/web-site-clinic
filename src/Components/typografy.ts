@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 interface RegularTextProps {
   size?: 'sm' | 'm' | 's' | 'l'
-  color?: 'text' | 'white' | 'red'
+  color?: 'text' | 'white' | 'red' | 'secundary-bg' | 'bg'
   weight?: string | number
 }
 

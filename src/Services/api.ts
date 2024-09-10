@@ -8,9 +8,9 @@ api.interceptors.request.use(async (config: InternalAxiosRequestConfig) => {
   const userData = localStorage.getItem(
     'ClinicaCorpoeMente:ClinicaCorpoeMente1.0',
   )
-  const token = userData !== null && JSON.parse(userData).token
+  const token = userData !== null ? JSON.parse(userData).token : null
 
-  if (token === true) {
+  if (token) {
     config.headers.Authorization = `Bearer ${token}`
   }
 
