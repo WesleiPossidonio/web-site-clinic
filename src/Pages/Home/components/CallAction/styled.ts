@@ -35,11 +35,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: 1rem;
+gap: 0.5rem;
 
 position: absolute;
 top: 7rem;
 z-index: 3;
+
+button {
+  margin-top: 1rem;
+}
 `
 
 

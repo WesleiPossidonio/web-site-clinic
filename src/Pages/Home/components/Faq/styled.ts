@@ -10,11 +10,11 @@ export const ContainerFaq = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 2rem;
 
-  margin: 0 auto;
-  padding: 3rem;
+  padding: 3.5rem;
+  margin-bottom: 5rem;
 
   @media (max-width: 726px) {
     height: max-content;

@@ -2,11 +2,13 @@ import styled from 'styled-components'
 
 export const ContainerCompany = styled.section`
   width: 100%;
-  height: 50rem;
+  height: 55rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2.5rem;
 
   padding: 1.5rem;
   margin: 0 auto;
@@ -15,12 +17,19 @@ export const ContainerCompany = styled.section`
   background-color: ${({ theme }) => theme.colors['base-white-100']};
 `
 
+export const ContainerTitle = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
 export const BgColor = styled.span`
   width: min(80rem, 70vw);
   height: 38rem;
   position: absolute;
-  top: 11%;
-  left: 11.5%;
+  top: 23%;
+  left: 18.5%;
 
   border: none;
   border-radius: 38px;

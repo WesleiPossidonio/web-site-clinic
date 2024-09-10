@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerAbout = styled.section`
 width: 100%;
-height: 50rem;
+height: 45rem;
 max-width: 120rem;
 
 display: flex;
@@ -21,7 +21,7 @@ padding: 3rem;
 `
 
 export const ContainerText = styled.div`
-width: 50%;
+max-width: 40%;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -34,7 +34,6 @@ gap: 1rem;
 `
 
 export const ContainerImages = styled.div`
-width: 50%;
 display: flex;
 align-items: center;
 justify-content: center;

@@ -1,12 +1,26 @@
 import { PlayCircle } from "@phosphor-icons/react"
-import { BgColor, ContainerCompany, ContainerVideo } from "./styled"
+import * as Dialog from '@radix-ui/react-dialog'
+
+import { BgColor, ContainerCompany, ContainerTitle, ContainerVideo } from "./styled"
+import { ModalVideo, TitleText } from "../../../../Components"
 
 export const SectionCompany = () => {
   return (
     <ContainerCompany>
-        <BgColor />
+      <ContainerTitle>
+        <TitleText color="bg" size="s">Conheça Nossa Clinica!</TitleText>
+        <TitleText color="text" size="l">Nosso Cunsutório Clinico!</TitleText>
+      </ContainerTitle>
+
+      <BgColor />
       <ContainerVideo>
-          <PlayCircle size={102} color="#fff" />
+        <Dialog.Root>
+          <Dialog.Trigger asChild>
+            <PlayCircle size={102} color="#fff" />
+          </Dialog.Trigger>
+          <ModalVideo />
+        </Dialog.Root>
+
       </ContainerVideo>
     </ContainerCompany>
   )

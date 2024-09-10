@@ -1,6 +1,5 @@
 
 import Accordion from '@mui/material/Accordion';
-
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { CaretDown } from "@phosphor-icons/react";
@@ -11,7 +10,6 @@ import {
   ContainerTitle,
   ContentAcordion,
   ContentFaq,
-  ImgFaq
 } from "./styled"
 import { TitleText } from '../../../../Components';
 
@@ -31,13 +29,13 @@ export const Faq = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              <Typography>Como posso acompanhar o status da minha entrega?</Typography>
+              <Typography>Quais serviços a clínica oferece?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Você pode acompanhar o status da sua entrega através do nosso 
-                sistema de rastreamento online, utilizando o código 
-                fornecido no momento da confirmação do pedido.
+                Oferecemos uma ampla gama de serviços, incluindo consultas médicas, 
+                exames diagnósticos, tratamentos especializados e acompanhamento contínuo. 
+                Para mais detalhes, consulte a seção de serviços do nosso site.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -48,13 +46,13 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Quais tipos de carga vocês transportam?</Typography>
+              <Typography>Como posso marcar uma consulta?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Transportamos uma ampla variedade de cargas, incluindo cargas 
-                secas, perecíveis, e cargas especiais sob consulta. Entre em 
-                contato para detalhes sobre transporte especializado.
+                Você pode agendar uma consulta pelo nosso site, 
+                ligando para nossa recepção ou enviando um e-mail 
+                para o nosso atendimento.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -65,13 +63,12 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Vocês oferecem serviço de transporte internacional?</Typography>
+              <Typography>Qual é o horário de funcionamento da clínica?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Sim, oferecemos serviços de transporte internacional, 
-                tanto para importação quanto exportação, 
-                com soluções de logística completas.
+                Nossa clínica está aberta de segunda a sexta-feira, das 8h às 18h, 
+                e aos sábados, das 8h às 12h. Estamos fechados aos domingos e feriados.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -82,13 +79,13 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Qual é o prazo de entrega para o transporte de cargas?</Typography>
+              <Typography>A clínica aceita convênios?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                O prazo de entrega depende da rota e do tipo de carga. 
-                Durante a solicitação do serviço, informamos o prazo 
-                estimado de acordo com sua necessidade.
+                Sim, aceitamos diversos convênios. Por favor, entre em contato 
+                com nossa recepção para verificar se o seu convênio é aceito e 
+                para obter mais informações sobre cobertura e co-participações.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -99,13 +96,13 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Como funciona o seguro de cargas?</Typography>
+              <Typography>O que devo levar para minha primeira consulta?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Oferecemos seguro de cargas para garantir a proteção da sua 
-                mercadoria durante todo o processo de transporte. O valor do 
-                seguro varia conforme o tipo e valor da carga.
+                Para sua primeira consulta, traga um documento de identidade 
+                com foto, o cartão do convênio (se aplicável), e qualquer 
+                exame ou documentação médica relevante.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -119,13 +116,13 @@ export const Faq = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              <Typography>Como posso acompanhar o status da minha entrega?</Typography>
+              <Typography>Posso cancelar ou reagendar uma consulta?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Você pode acompanhar o status da sua entrega através do nosso 
-                sistema de rastreamento online, utilizando o código 
-                fornecido no momento da confirmação do pedido.
+                Sim, você pode cancelar ou reagendar uma consulta com pelo menos 
+                24 horas de antecedência. Entre em contato com nossa recepção 
+                para realizar essas alterações.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -136,13 +133,13 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Quais tipos de carga vocês transportam?</Typography>
+              <Typography>Qual é o tempo de espera para agendar uma consulta?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Transportamos uma ampla variedade de cargas, incluindo cargas 
-                secas, perecíveis, e cargas especiais sob consulta. Entre em 
-                contato para detalhes sobre transporte especializado.
+                O tempo de espera para uma consulta pode variar dependendo da 
+                especialidade e da disponibilidade do médico. Geralmente, 
+                tentamos agendar consultas o mais rápido possível.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -153,13 +150,13 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Vocês oferecem serviço de transporte internacional?</Typography>
+              <Typography>A clínica oferece telemedicina?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Sim, oferecemos serviços de transporte internacional, 
-                tanto para importação quanto exportação, 
-                com soluções de logística completas.
+                Sim, oferecemos consultas por telemedicina para maior 
+                comodidade dos nossos pacientes. Entre em contato para saber 
+                mais sobre como agendar uma consulta virtual.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -170,13 +167,13 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Qual é o prazo de entrega para o transporte de cargas?</Typography>
+              <Typography>Como posso obter resultados de exames?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                O prazo de entrega depende da rota e do tipo de carga. 
-                Durante a solicitação do serviço, informamos o prazo 
-                estimado de acordo com sua necessidade.
+                Os resultados dos exames são disponibilizados através do nosso 
+                portal de pacientes ou podem ser retirados diretamente na clínica. 
+                Nossa equipe também pode enviar os resultados por e-mail, se preferir.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -187,19 +184,21 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Como funciona o seguro de cargas?</Typography>
+              <Typography>Quais medidas de segurança a clínica adota?</Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Oferecemos seguro de cargas para garantir a proteção da sua 
-                mercadoria durante todo o processo de transporte. O valor do 
-                seguro varia conforme o tipo e valor da carga.
+                A segurança dos nossos pacientes é uma prioridade. 
+                Adotamos rigorosos protocolos de higiene e segurança, 
+                ncluindo desinfecção frequente das áreas comuns, 
+                so de equipamentos de proteção e medidas de 
+                distanciamento social conforme necessário.
               </Typography>
             </AccordionDetails>
           </Accordion>
         </ContentAcordion>
       </ContentFaq>
-      
+
     </ContainerFaq>
   )
 }

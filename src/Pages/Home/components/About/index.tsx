@@ -1,4 +1,5 @@
 import { TextRegular, TitleText } from "../../../../Components";
+import { Button } from "../../../../Components/Button";
 import {
   ContainerAbout,
   ContainerImages,
@@ -15,16 +16,19 @@ export const SectionAbout = () => {
         <TitleText size="s" color="secundary-bg">
           Sobre Nós
         </TitleText>
-        <TitleText size="l" weight={500}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing
+        <TitleText size="l" weight={600}>
+          Cuidado e Excelência em Cada Detalhe
         </TitleText>
-        <TextRegular size="s" weight={500}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illo,
-          alias, minus porro laborum voluptates quos dolor, iure est unde
-          necessitatibus tempora facere nesciunt quia. Cum impedit repudiandae
-          aliquam laudantium Lorem ipsum dolor sit, amet consectetur adipisicing
-          elit. Voluptas quo dolores
+        <TextRegular size="sm" weight={500}>
+          Somos uma clínica dedicada a oferecer <strong>atendimento de qualidade</strong>,
+          com profissionais <strong>experientes e tecnologia avançada</strong>. 
         </TextRegular>
+        <TextRegular size="sm" weight={500}>
+           Nosso foco é proporcionar tratamentos <strong>eficientes e personalizados</strong>, 
+          garantindo o seu <strong>bem-estar em cada etapa do processo</strong>. Aqui, 
+          você encontra cuidado, respeito e resultados.
+        </TextRegular>
+        <Button colors="bg">Saiba Mais!</Button>
       </ContainerText>
 
       <ContainerImages>

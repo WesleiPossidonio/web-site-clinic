@@ -1,5 +1,6 @@
 import { ContainerCallAction, ContainerText, ContentCallAction,} from "./styled"
 import { TitleText } from "../../../../Components"
+import { Button } from "../../../../Components/Button"
 
 // link icon svg https://delesign.com/free-designs/graphics/illustration/task
 
@@ -8,9 +9,9 @@ export const CallAction = () => {
     <ContainerCallAction>
       <ContentCallAction>
         <ContainerText>
-            <TitleText color="white" id="title" size="s">Muito Mais que uma Clinica!</TitleText>
-            <TitleText size="xl" weight={600}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quas aliquid reprehenderit</TitleText>
-            <button>Saiba Mais!</button>
+            <TitleText color="white" id="title" size="s">Seu bem-estar começa aqui!</TitleText>
+            <TitleText size="xl" weight={600}>Marque sua consulta e transforme <br /> sua saúde hoje mesmo!</TitleText>
+            <Button colors="white">Saiba Mais!</Button>
          </ContainerText>
       </ContentCallAction>
     </ContainerCallAction>

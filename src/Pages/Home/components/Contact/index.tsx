@@ -174,7 +174,7 @@ export const Contact = () => {
                 onChange={handleCapcha}
               />
             </div>
-            <Button>Enviar</Button>
+            <Button colors="white">Enviar</Button>
           </ContentForm>
         </ContentInfo>
       </ContentContact>

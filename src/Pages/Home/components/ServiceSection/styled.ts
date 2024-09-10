@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const ContainerServices = styled.section`
   width: 100%;
-  max-width: 120rem;
+  max-width: 110rem;
   height: max-content;
 
-  padding: 6rem 3rem;
+  padding: 6rem;
   margin: 0 auto;
   margin-top: 1rem;
 
