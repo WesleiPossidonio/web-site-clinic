@@ -1,5 +1,6 @@
 import * as zod from 'zod'
-
+import ReCAPTCHA from "react-google-recaptcha"
+import { toast } from "react-toastify"
 import { TextRegular, TitleText } from "../../Components"
 import {
   ButtonLogin,
@@ -16,6 +17,7 @@ import ImageLogin from '../../assets/ImgLogin.svg'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useListVocancies } from '../../Contexts/CompanyContext'
+import { useState } from 'react'
 
 const sendLoginFormSchema = zod.object({
   email: zod.string().email('Por gentileza, digite o seu email corretamente'),
@@ -25,6 +27,7 @@ const sendLoginFormSchema = zod.object({
 type createSendLoginFormInputs = zod.infer<typeof sendLoginFormSchema>
 
 export const Login = () => {
+  const [captcha, setCaptcha] = useState<string | null>('')
   const {
     register,
     handleSubmit,
@@ -34,13 +37,24 @@ export const Login = () => {
     resolver: zodResolver(sendLoginFormSchema),
   })
 
-  const { HandleLoginCompanies } = useListVocancies()
+  const { handleLoginCompanies } = useListVocancies()
+
+  const handleCapcha = (token: string | null) => {
+    setCaptcha(token)
+  }
 
   const handleLogin = (data: createSendLoginFormInputs) => {
-    console.log(data)
-    HandleLoginCompanies(data)
+    if (!captcha) {
+      toast.error("Captcha pendente!", {
+        position: "top-right"
+      })
+      return;
+    }
+
+    handleLoginCompanies(data)
     reset()
   }
+
   return (
     <ContainerLogin>
       <ContentLogin>
@@ -78,6 +92,12 @@ export const Login = () => {
               </TextRegular>
             )}
             <TextRegular size="s" color="secundary-bg">Esqueceu Senha?</TextRegular>
+            <div id='reCaptcha'>
+              <ReCAPTCHA
+                sitekey={import.meta.env.VITE_RECAPTCHA_KEY}
+                onChange={handleCapcha}
+              />
+            </div>
             <ButtonLogin type='submit'>Login</ButtonLogin>
           </Form>
 

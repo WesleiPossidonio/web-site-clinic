@@ -109,7 +109,7 @@ export const Contact = () => {
                 <TitleText size="s" color="white">Telefones:</TitleText>
                 <TextRegular color="white">
                 <strong>Macaé:</strong>{' '} 
-                <a href="tel:+55222762-2717">(22) 2762-2717</a>
+                <a href="tel:+55229921285207">(22) 992128520</a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>
@@ -120,7 +120,7 @@ export const Contact = () => {
                 <TitleText size="s" color="white">E-mail</TitleText>
                 <TextRegular color="white"><strong>Macaé:</strong>{' '}
                   <a href="mailto:vendas@centraldeacos.com.br">
-                    vendas@centraldeacos.com.br
+                    mail@gmail.com
                   </a>
                 </TextRegular>
               </div>
@@ -131,7 +131,8 @@ export const Contact = () => {
               <div>
                 <TitleText size="s" color="white">Endereços</TitleText>
                 <TextRegular color="white" weight={500}>
-                  <a href="#"> R. Evaldo Costa, 1103 - Sol Y Mar, Macaé - RJ </a>
+                  <a href="#"> Av. Rui Barbosa, 688, bloco A, sala 103 <br /> 
+                  Galeria Carapebus - Centro, Macaé 27910-362 </a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>

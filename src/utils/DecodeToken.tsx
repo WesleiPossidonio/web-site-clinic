@@ -8,8 +8,7 @@ interface JwtPayload {
   email: string;
   position: string;
   admin: string;
-  iat: number;  // Data de emissão
-  exp: number;  // Data de expiração
+  type_user: string;
 }
 
 export const decodeToken = (token: string | null): JwtPayload | null => {
@@ -17,7 +16,6 @@ export const decodeToken = (token: string | null): JwtPayload | null => {
 
   try {
     const decodedToken = jwtDecode<JwtPayload>(token);
-    console.log(decodedToken)
     return decodedToken;
   } catch (error) {
     console.error('Erro ao decodificar o token', error);

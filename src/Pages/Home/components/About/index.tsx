@@ -1,5 +1,6 @@
 import { TextRegular, TitleText } from "../../../../Components";
 import { Button } from "../../../../Components/Button";
+import AOS from 'aos'
 import {
   ContainerAbout,
   ContainerImages,
@@ -8,11 +9,17 @@ import {
   ImageAboutTwo,
   YearsExperience,
 } from "./styled";
+import { useEffect } from "react";
 
 export const SectionAbout = () => {
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <ContainerAbout>
-      <ContainerText>
+      <ContainerText data-aos="fade-right" data-aos-duration="1500">
         <TitleText size="s" color="secundary-bg">
           Sobre Nós
         </TitleText>
@@ -31,8 +38,8 @@ export const SectionAbout = () => {
         <Button colors="bg">Saiba Mais!</Button>
       </ContainerText>
 
-      <ContainerImages>
-        <ImageAbout src="https://img.freepik.com/fotos-gratis/mulheres-seniores-em-aula-de-reforma-de-pilates_23-2150778119.jpg?t=st=1722567233~exp=1722570833~hmac=fbbf6c0e94564c09d2d7f67814cd876ff46a1cd3ac56cb78d9138ae68cac9bb6&w=740" />
+      <ContainerImages data-aos="fade-down" data-aos-duration="1500">
+        <ImageAbout data-aos="fade-up" data-aos-duration="1500" src="https://img.freepik.com/fotos-gratis/mulheres-seniores-em-aula-de-reforma-de-pilates_23-2150778119.jpg?t=st=1722567233~exp=1722570833~hmac=fbbf6c0e94564c09d2d7f67814cd876ff46a1cd3ac56cb78d9138ae68cac9bb6&w=740" />
 
         <div>
           <YearsExperience>

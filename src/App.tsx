@@ -4,17 +4,22 @@ import { GlobalStyled } from "./styles/globalStyles"
 import { BrowserRouter } from "react-router-dom"
 import { ToastContainer } from 'react-toastify'
 import { Router } from "./Routes/routes"
-import 'react-toastify/dist/ReactToastify.css'
 import { AppProvider } from "./Contexts"
+import { Theme } from '@radix-ui/themes';
+
+import 'react-toastify/dist/ReactToastify.css'
+import '@radix-ui/themes/styles.css';
 
 function App() {
   return (
     <BrowserRouter>
       <AppProvider>
         <ThemeProvider theme={DefaultThemes}>
-          <Router />
-          <GlobalStyled />
-          <ToastContainer />
+          <Theme>
+            <Router />
+            <GlobalStyled />
+            <ToastContainer />
+          </Theme>
         </ThemeProvider>
       </AppProvider>
     </BrowserRouter>

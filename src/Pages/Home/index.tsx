@@ -1,4 +1,4 @@
-import { Contact,  Faq,  HeaderLinks, HeaderMenu, MainSection, SectionAbout, SectionServices } from "./components"
+import { Contact,  Faq,  Footer,  HeaderLinks, HeaderMenu, MainSection, SectionAbout, SectionServices } from "./components"
 import { CallAction } from "./components/CallAction"
 import { SectionCompany } from "./components/SectionCompany"
 import { ContainerHome, Header } from "./styled"
@@ -16,9 +16,9 @@ export const Home = () => {
       <SectionCompany />
       <SectionServices />
       <CallAction />
-      {/* <FeedInstagram /> */}
       <Faq />
       <Contact />
+      <Footer />
     </ContainerHome>
   )
 }

@@ -13,7 +13,7 @@ interface InputStyleContainerProps {
 
 export const InputContaineStyle = styled.div<InputStyleContainerProps>`
   width: 100%;
-  height: 3.155625rem;
+  height: 2.5rem;
 
   font-style: normal;
   font-weight: 400;
@@ -51,7 +51,7 @@ export const InputStyled = styled.input`
   font-weight: 400;
   padding: 0.5rem;
 
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 
   color: ${({ theme }) => theme.colors['base-text']};
 
@@ -60,7 +60,7 @@ export const InputStyled = styled.input`
   }
 
   &:focus {
-    border: 2px solid ${({ theme }) => theme.colors['base-white']};
+    border: 2px solid ${({ theme }) => theme.colors['base-bg']};
     border-radius: 8px;
   }
 `

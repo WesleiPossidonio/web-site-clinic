@@ -1,13 +1,15 @@
-import { ReactNode } from "react"
+import { ButtonHTMLAttributes, ReactNode } from "react"
 import { ContainerButton } from "./styled"
 
-type ButtonProps = {
-  children: ReactNode
-  colors: 'bg' | 'white'
-}
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: ReactNode;
+  colors: 'bg' | 'white';
+};
 
-export const Button = ({ children, colors }: ButtonProps) => {
+export const Button = ({ children, colors, ...rest}: ButtonProps) => {
   return (
-    <ContainerButton colors={colors}>{children}</ContainerButton>
+    <ContainerButton colors={colors} {...rest}>
+      {children}
+    </ContainerButton>
   )
 }

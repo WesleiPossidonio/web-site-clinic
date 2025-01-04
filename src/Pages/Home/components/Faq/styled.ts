@@ -13,6 +13,7 @@ export const ContainerFaq = styled.section`
   justify-content: center;
   gap: 2rem;
 
+  margin: 0 auto;
   padding: 3.5rem;
   margin-bottom: 5rem;
 

@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
 import { ContainerHeaderMenu, ImgLogo, NavDesktop, NavLink } from "./styled"
 import Logo from '../../../../assets/logo.png'
+import { useNavigate } from "react-router-dom"
+
 
 export const HeaderMenu = () => {
   const [stateBackgroundHeader, setStateBackgroundHeader] =
     useState<boolean>(false)
+    const navigate = useNavigate()
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,8 +66,7 @@ export const HeaderMenu = () => {
 
         <NavLink
           stateHeader={stateBackgroundHeader}
-          href="#contato"
-        
+          onClick={() => navigate('/login')}
         >
           Login 
         </NavLink>

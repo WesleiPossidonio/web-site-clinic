@@ -1,10 +1,16 @@
 import { PlayCircle } from "@phosphor-icons/react"
 import * as Dialog from '@radix-ui/react-dialog'
+import AOS from 'aos'
 
 import { BgColor, ContainerCompany, ContainerTitle, ContainerVideo } from "./styled"
 import { ModalVideo, TitleText } from "../../../../Components"
+import { useEffect } from "react"
 
 export const SectionCompany = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <ContainerCompany>
       <ContainerTitle>
@@ -13,7 +19,8 @@ export const SectionCompany = () => {
       </ContainerTitle>
 
       <BgColor />
-      <ContainerVideo>
+      <ContainerVideo data-aos="zoom-in-down" data-aos-duration="1000">
+        
         <Dialog.Root>
           <Dialog.Trigger asChild>
             <PlayCircle size={102} color="#fff" />

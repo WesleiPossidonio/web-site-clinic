@@ -6,6 +6,7 @@ export const DefaultThemes = {
     'base-white-100': '#fffafa',
     'base-text': '#000',
     'base-red': 'red',
+    'base-gray': '#eee'
   },
   FontSizes: {
     'text-regular-sm': '0.875rem',

@@ -1,6 +1,5 @@
 import { forwardRef, type InputHTMLAttributes } from 'react'
 
-
 import { InputContaineStyle, InputStyled, InputWrapper } from './styled'
 import { TextRegular } from '../typografy'
 

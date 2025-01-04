@@ -28,7 +28,7 @@ export const BgColor = styled.span`
   width: min(80rem, 70vw);
   height: 38rem;
   position: absolute;
-  top: 23%;
+  top: 25%;
   left: 18.5%;
 
   border: none;
