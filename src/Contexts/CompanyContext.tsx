@@ -84,8 +84,7 @@ export interface GetListPatientDataProps {
 export interface ClientQueryProps {
   id?: string
   doctor_id: string
-  consultation_hours: string
-  consultation_date: string
+  schedules_id: string
   patients_name: string
   email_client: string
   patients_cpf: string
@@ -102,10 +101,11 @@ export interface ListClientQueryProps extends ClientQueryProps {
 }
 
 export interface SchedulesProps {
-  id: string
+  id?: string
   doctor_id: string
   date: string
-  hours: string
+  startTime: string
+  endTime: string
   state_schedules: string
 }
 
@@ -118,6 +118,8 @@ export interface DataDoctorProps {
   admin: boolean
   password: string
   type_user: string
+  google_refresh_token: string
+  google_access_token: string
   doctor_schedules: SchedulesProps[]
   patients: GetListPatientDataProps[]
   list_execicies: CategoryProps
@@ -300,8 +302,7 @@ export const ListCompanyProvider = ({ children }: ListCompanyProps) => {
 
   const handleAddClientQuery = useCallback(async (data: ClientQueryProps) => {
     const {
-      consultation_date,
-      consultation_hours,
+      schedules_id,
       doctor_id,
       email_client,
       patients_cpf,
@@ -312,8 +313,7 @@ export const ListCompanyProvider = ({ children }: ListCompanyProps) => {
     try {
       const response = await toast.promise(
         api.post('createConsult', {
-          consultation_date,
-          consultation_hours,
+          schedules_id,
           doctor_id,
           email_client,
           patients_cpf,
@@ -391,15 +391,16 @@ export const ListCompanyProvider = ({ children }: ListCompanyProps) => {
   }, [])
 
   const handleAddSchedules = useCallback(async (data: SchedulesProps) => {
-    const { date, doctor_id, hours, state_schedules } = data
+    const { date, doctor_id, endTime, startTime, state_schedules } = data
 
     try {
       await toast.promise(
         api.post('createSchedules', {
           date,
           doctor_id,
-          hours,
-          state_schedules,
+          endTime, 
+          startTime,
+          state_schedules
         }),
         {
           pending: 'Verificando seus dados',

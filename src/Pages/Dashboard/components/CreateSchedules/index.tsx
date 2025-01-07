@@ -11,7 +11,8 @@ import { useListVocancies } from '../../../../Contexts/CompanyContext'
 
 const createSchedulesFormSchema = zod.object({
   date: zod.string(),
-  hours: zod.string(),
+  startTime: zod.string(),
+  endTime: zod.string(),
 })
 
 type createSchedulesFormFormInputs = zod.infer<typeof createSchedulesFormSchema>
@@ -32,7 +33,8 @@ export const CreateSchedules = () => {
   const handleCreateSchedules = (data: createSchedulesFormFormInputs) => {
     const {
       date,
-      hours,
+      endTime,
+      startTime
     } = data
 
     const { id } = dataUserLogin
@@ -40,7 +42,8 @@ export const CreateSchedules = () => {
     const schedules = {
       doctor_id: id,
       date,
-      hours,
+      endTime,
+      startTime,
       state_schedules: 'Disponivel'
     }
 
@@ -65,8 +68,14 @@ export const CreateSchedules = () => {
         <Input
           placeholder="12:30"
           type="text"
-          {...register('hours')}
-          error={errors.hours?.message}
+          {...register('startTime')}
+          error={errors.startTime?.message}
+        />
+               <Input
+          placeholder="12:30"
+          type="text"
+          {...register('endTime')}
+          error={errors.endTime?.message}
         />
         <Button colors="bg" type="submit">Adicionar Horário</Button>
       </ContentForm>

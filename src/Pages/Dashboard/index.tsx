@@ -7,12 +7,14 @@ import {
   CreateClientQuery,
   CreateExercise,
   CreateSchedules,
+  CreateUser,
   MenuDashboard,
   MyConsults,
   MyPatients,
   ScheduledAppointment,
   SectionDataUser,
 } from './components'
+
 
 export const Dashboard = () => {
   const { dataUserLogin } = useListVocancies()
@@ -35,7 +37,7 @@ export const Dashboard = () => {
       case 'AddQuery':
         return <CreateClientQuery />
       case 'AddUser':
-        return <SectionDataUser />
+        return <CreateUser />
       default:
         return <ScheduledAppointment />
     }

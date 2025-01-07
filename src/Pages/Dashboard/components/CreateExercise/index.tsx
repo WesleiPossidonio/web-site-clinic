@@ -80,7 +80,7 @@ export const CreateExercise = () => {
           placeholder="Video"
           type="file"
           {...register('url_video')}
-          error={errors.url_video?.message || ''}
+          error={errors.url_video?.message?.toString() || ''}
         />
         <TextArea
           placeholder="Descrição do Exercicio"

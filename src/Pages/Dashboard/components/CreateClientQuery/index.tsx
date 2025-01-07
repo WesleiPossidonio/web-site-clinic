@@ -13,8 +13,7 @@ import { Selected } from '../CreateExercise/styled'
 
 const createClientQuerySchema = zod.object({
   doctor_name: zod.string().min(1, 'Por gentileza, Insira o nome do Doutor'),
-  consultation_hours: zod.string().min(1, "Por gentileza, Selecione um Horário"),
-  consultation_date: zod.string().min(1, "Por gentileza, Selecione uma Data"),
+  schedules_id: zod.string().uuid(),
   patients_name: zod.string().min(1, "Por gentileza, Digite o Nome do Paciente"),
   email_client: zod.string().email('Por gentileza, digite o email corretamente'),
   patients_cpf: zod.string().min(11, 'Por gentileza, digite o CPF corretamente').max(11, 'Por gentileza, digite o CPF corretamente'),
@@ -112,26 +111,15 @@ export const CreateClientQuery = () => {
           error={errors.service_type?.message}
         />
 
-        <Selected {...register('consultation_date')}>
-          <option value='' disabled selected>Adicionar Data</option>
+        <Selected {...register('schedules_id')}>
+          <option value='' disabled selected>Adicionar Data e Horário</option>
           {
             doctorSchedules.map(date => {
-              return <option value={date.date}>{date.date}</option>
+              return <option value={date.id}>{date.date} | {date.startTime}</option>
             })
           }
 
         </Selected>
-
-        <Selected {...register('consultation_hours')}>
-          <option value='' disabled selected>Adicionar Horário</option>
-          {
-            doctorSchedules.map(hours => {
-              return <option value={hours.hours}>{hours.hours}</option>
-            })
-          }
-
-        </Selected>
-
         <Button colors="bg" type='submit'>Marcar Consulta</Button>
       </ContentForm>
     </ContainerCreateClientQuery>
